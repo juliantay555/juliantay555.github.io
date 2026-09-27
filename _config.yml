@@ -41,6 +41,6 @@ exclude:
   - README.md
   - _templates
 
-  # Creates juliantay.org/sitemap.xml ...
+# Creates juliantay.org/sitemap.xml so search engines can find every page.
 plugins:
-     - jekyll-sitemap
+  - jekyll-sitemap
