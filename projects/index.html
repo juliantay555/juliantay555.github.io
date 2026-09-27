@@ -1,0 +1,19 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+summary: Professional projects by Julian Tay.
+---
+{% include projects-nav.html %}
+<h1>Projects</h1>
+<p class="lede">Initiatives and research, current and completed.</p>
+{%- assign projects = site.projects | where: "section", "professional" | sort: "order" %}
+<div class="stack">
+{%- for p in projects %}
+<a class="card" href="{{ p.url | relative_url }}">
+  <span class="meta">{{ p.period }}</span>
+  <span class="card-title">{{ p.title }} <span class="status">{{ p.status }}</span></span>
+  <span class="card-summary">{{ p.summary }}</span>
+</a>
+{%- endfor %}
+</div>

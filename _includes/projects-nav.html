@@ -1,0 +1,6 @@
+<nav class="subnav" aria-label="Projects">
+  {%- assign in_personal = false -%}
+  {%- if page.url contains '/projects/personal/' or page.section == 'personal' -%}{%- assign in_personal = true -%}{%- endif %}
+  <a href="{{ '/projects/' | relative_url }}"{% unless in_personal %} aria-current="page"{% endunless %}>Professional</a>
+  <a href="{{ '/projects/personal/' | relative_url }}"{% if in_personal %} aria-current="page"{% endif %}>Personal</a>
+</nav>

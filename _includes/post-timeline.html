@@ -1,0 +1,19 @@
+{%- assign list = include.list -%}
+{%- if list and list.size > 0 -%}
+{%- assign total = list.size -%}
+{%- assign current_month = "" -%}
+{%- for e in list -%}
+  {%- assign m = e.date | date: "%B %Y" -%}
+  {%- if m != current_month -%}
+    {%- unless forloop.first %}</ul>{% endunless %}
+<h2>{{ m }}</h2>
+<ul class="rows">
+    {%- assign current_month = m -%}
+  {%- endif %}
+  <li><span class="when">{{ e.date | date: "%-d %b" }}</span><span class="what">{% if include.numbered %}<span class="num">No. {{ total | minus: forloop.index0 }}</span>{% endif %}<a href="{{ e.url | relative_url }}">{{ e.title }}</a></span></li>
+  {%- if forloop.last %}
+</ul>{% endif -%}
+{%- endfor -%}
+{%- else %}
+<p class="empty">{{ include.empty }}</p>
+{%- endif %}

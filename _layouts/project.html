@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% include projects-nav.html %}
+<article>
+  <p class="meta">{{ page.period }}{% if page.with %} &middot; {{ page.with }}{% endif %}</p>
+  <h1>{{ page.title }} <span class="status">{{ page.status }}</span></h1>
+  <div class="prose">
+{{ content }}
+  </div>
+  {%- if page.documents %}
+  <h2>Documents</h2>
+  <ul class="rows">
+    {%- for d in page.documents %}
+    <li><span class="when">{{ d.date }}</span><span class="what"><a href="{{ d.pdf | relative_url }}">{{ d.title }}</a> <span class="sub">(PDF)</span></span></li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</article>

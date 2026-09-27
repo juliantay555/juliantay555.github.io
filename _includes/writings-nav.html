@@ -1,0 +1,7 @@
+<nav class="subnav" aria-label="Writings">
+  <a href="{{ '/writings/papers/' | relative_url }}"{% if page.url contains '/writings/papers/' %} aria-current="page"{% endif %}>Papers</a>
+  <a href="{{ '/writings/research/' | relative_url }}"{% if page.url contains '/writings/research/' %} aria-current="page"{% endif %}>Publications &amp; Research</a>
+  <span class="subnav-sep" aria-hidden="true"></span>
+  <a href="{{ '/writings/journal/' | relative_url }}"{% if page.url contains '/writings/journal/' %} aria-current="page"{% endif %}>Philoso-Journal</a>
+  <a href="{{ '/writings/films/' | relative_url }}"{% if page.url contains '/writings/films/' %} aria-current="page"{% endif %}>Film Critiques</a>
+</nav>

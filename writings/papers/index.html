@@ -1,0 +1,21 @@
+---
+layout: default
+title: Papers
+permalink: /writings/papers/
+summary: Papers written by Julian Tay at Phillips Academy Andover.
+---
+{% include writings-nav.html %}
+<h1>Papers</h1>
+<p class="lede">Written at Phillips Academy Andover, grouped by subject, newest first.</p>
+{%- for topic in site.data.paper-topics %}
+{%- assign group = site.papers | where: "topic", topic | sort: "date" | reverse %}
+{%- if group.size > 0 %}
+<h2>{{ topic }}</h2>
+<ul class="rows">
+  {%- for p in group %}
+  {%- assign body = p.content | strip_html | strip %}
+  <li><span class="when">{{ p.date | date: "%b %Y" }}</span><span class="what">{% if body != "" %}<a href="{{ p.url | relative_url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.summary %}<br><span class="sub">{{ p.summary }}</span>{% endif %}</span></li>
+  {%- endfor %}
+</ul>
+{%- endif %}
+{%- endfor %}

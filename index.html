@@ -1,0 +1,45 @@
+---
+layout: default
+title: About
+permalink: /
+---
+<h1>Julian Tay</h1>
+<div class="prose intro">
+  <p>I am from Singapore and graduated from Phillips Academy Andover in May 2026. My interests lie in environmental economics, green finance and public policy.</p>
+</div>
+
+<h2>Latest</h2>
+<div class="cards">
+  {%- assign entries = site.categories.journal %}
+  {%- if entries and entries.size > 0 %}{% assign entry = entries | first %}
+  <a class="card" href="{{ entry.url | relative_url }}">
+    <span class="card-label">Philoso-Journal &middot; No. {{ site.categories.journal.size }}</span>
+    <span class="card-title">{{ entry.title }}</span>
+    <span class="card-summary">{{ entry.date | date: "%-d %B %Y" }}</span>
+  </a>
+  {%- else %}
+  <a class="card" href="{{ '/writings/journal/' | relative_url }}">
+    <span class="card-label">Journal</span>
+    <span class="card-title">Philoso-Journal</span>
+    <span class="card-summary">Weekly entries begin soon.</span>
+  </a>
+  {%- endif %}
+
+  {%- assign latest = site.papers | sort: "date" | last %}
+  {%- assign latest_body = latest.content | strip_html | strip %}
+  <a class="card" href="{% if latest_body != "" %}{{ latest.url | relative_url }}{% else %}{{ '/writings/papers/' | relative_url }}{% endif %}">
+    <span class="card-label">Paper</span>
+    <span class="card-title">{{ latest.title }}</span>
+    <span class="card-summary">{{ latest.date | date: "%B %Y" }}</span>
+  </a>
+
+  {%- for p in site.projects %}{% if p.featured %}{% assign project = p %}{% endif %}{% endfor %}
+  <a class="card" href="{{ project.url | relative_url }}">
+    <span class="card-label">Project</span>
+    <span class="card-title">{{ project.title }}</span>
+    <span class="card-summary">{{ project.status }}</span>
+  </a>
+</div>
+
+<h2>Contact</h2>
+<p class="links"><a href="{{ site.linkedin }}">LinkedIn</a></p>

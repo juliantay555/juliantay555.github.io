@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{% include writings-nav.html %}
+<article>
+  <p class="meta">{{ page.topic }} &middot; {{ page.date | date: "%-d %B %Y" }}</p>
+  <h1>{{ page.title }}</h1>
+  {%- if page.summary %}<p class="lede paper-summary">{{ page.summary }}</p>{% endif %}
+  <p class="paper-byline">Julian Tay{% if page.coauthor %} and {{ page.coauthor }}{% endif %}{% if page.course %}<br>{{ page.course }}, Phillips Academy Andover{% endif %}{% if page.instructor %}<br>Instructor: {{ page.instructor }}{% endif %}</p>
+  {%- if page.prompt %}
+  <aside class="prompt" aria-label="Assignment prompt">
+    <p class="prompt-label">Prompt</p>
+    {{ page.prompt }}
+  </aside>
+  {%- endif %}
+  {%- if page.works %}
+  <div class="works">
+    <p class="prompt-label">Works discussed</p>
+    <ul>{% for w in page.works %}<li>{{ w }}</li>{% endfor %}</ul>
+  </div>
+  {%- endif %}
+  <div class="prose paper-body">
+{{ content }}
+  </div>
+</article>
+<nav class="pager" aria-label="More papers"><a href="{{ '/writings/papers/' | relative_url }}">&larr; All papers</a></nav>

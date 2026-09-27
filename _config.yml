@@ -1,0 +1,42 @@
+# Site settings. GitHub Pages reads this file automatically.
+title: Julian Tay
+description: Environmental economics, green finance, public policy.
+url: https://juliantay.org
+timezone: Asia/Singapore
+linkedin: https://www.linkedin.com/in/julian-tay-392a8a320
+
+# The tabs across the top of every page, in order.
+nav:
+  - title: About
+    url: /
+  - title: CV
+    url: /cv/
+  - title: Writings
+    url: /writings/
+  - title: Projects
+    url: /projects/
+
+# Weekly journal entries live in writings/journal/_posts; film critiques in writings/films/_posts.
+# Projects (professional and personal) live in _projects; papers live in _papers.
+permalink: /:categories/:year/:month/:day/:title/
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  papers:
+    output: true
+    permalink: /writings/papers/:name/
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "", type: projects }
+    values: { layout: project }
+  - scope: { path: "", type: papers }
+    values: { layout: paper }
+
+markdown: kramdown
+exclude:
+  - README.md
+  - _templates

@@ -1,0 +1,19 @@
+---
+layout: default
+title: Personal
+permalink: /projects/personal/
+summary: Personal interests and experiments of Julian Tay.
+---
+{% include projects-nav.html %}
+<h1>Personal</h1>
+<p class="lede">Interests and experiments outside formal work.</p>
+{%- assign projects = site.projects | where: "section", "personal" | sort: "order" %}
+<div class="stack">
+{%- for p in projects %}
+<a class="card" href="{{ p.url | relative_url }}">
+  <span class="meta">{{ p.period }}</span>
+  <span class="card-title">{{ p.title }} <span class="status">{{ p.status }}</span></span>
+  <span class="card-summary">{{ p.summary }}</span>
+</a>
+{%- endfor %}
+</div>

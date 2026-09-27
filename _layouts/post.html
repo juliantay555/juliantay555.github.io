@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{%- if page.categories contains 'journal' -%}
+  {%- assign posts = site.categories.journal -%}
+  {%- assign back_url = '/writings/journal/' -%}
+  {%- assign back_title = 'Philoso-Journal' -%}
+  {% include writings-nav.html %}
+{%- elsif page.categories contains 'films' -%}
+  {%- assign posts = site.categories.films -%}
+  {%- assign back_url = '/writings/films/' -%}
+  {%- assign back_title = 'Film Critiques' -%}
+  {% include writings-nav.html %}
+{%- else -%}
+  {%- assign posts = site.categories.personal -%}
+  {%- assign back_url = '/projects/personal/' -%}
+  {%- assign back_title = 'Personal' -%}
+  {% include projects-nav.html %}
+{%- endif -%}
+{%- for p in posts -%}
+  {%- if p.url == page.url -%}
+    {%- assign newer_i = forloop.index0 | minus: 1 -%}
+    {%- assign older_i = forloop.index0 | plus: 1 -%}
+    {%- assign entry_no = posts.size | minus: forloop.index0 -%}
+  {%- endif -%}
+{%- endfor %}
+<article>
+  <p class="meta">{% if page.categories contains 'journal' %}No. {{ entry_no }} &middot; {% endif %}{{ page.date | date: "%-d %B %Y" }}</p>
+  <h1>{{ page.title }}</h1>
+  {%- if page.film %}<p class="meta">{{ page.film }}</p>{% endif %}
+  <div class="prose">
+{{ content }}
+  </div>
+</article>
+<nav class="pager" aria-label="More entries">
+  {%- if older_i < posts.size %}{% assign older = posts[older_i] %}<a href="{{ older.url | relative_url }}">&larr; {{ older.title }}</a>{% else %}<a href="{{ back_url | relative_url }}">&larr; {{ back_title }}</a>{% endif -%}
+  {%- if newer_i >= 0 %}{% assign newer = posts[newer_i] %}<a href="{{ newer.url | relative_url }}">{{ newer.title }} &rarr;</a>{% endif %}
+</nav>
