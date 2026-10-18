@@ -174,3 +174,7 @@ a.reversefootnote { text-decoration: none; margin-left: 0.25rem; }
 .prose figcaption { font-size: 1rem; color: var(--muted); margin-top: 0.6rem; }
 .prose .table-wrap table td:first-child { text-align: left; }
 .paper-summary { font-size: 1.125rem; margin: 0.5rem 0 1rem; }
+
+/* Year and month headings in the Philoso-Journal and Film Critiques lists */
+.timeline-year { font-family: var(--serif); font-size: 1.75rem; font-weight: 500; text-transform: none; font-variant-caps: normal; letter-spacing: 0; color: var(--text); font-variant-numeric: lining-nums; margin: 3rem 0 0.25rem; }
+.timeline-month { font-size: 1rem; font-weight: 400; font-variant-caps: small-caps; text-transform: lowercase; letter-spacing: 0.1em; color: var(--muted); margin: 1.5rem 0 0.5rem; }
