@@ -1,5 +1,5 @@
 ---
-title: "Reminiscience"
+title: "Reminiscence"
 ---
 
 I’m pretty sure of my younger self’s longing to be where I am right now: a guy who has graduated high school and liberated from the hollow depths of stress. I think that is at least where my eighth, ninth, and eleventh year self has always wanted to be.
