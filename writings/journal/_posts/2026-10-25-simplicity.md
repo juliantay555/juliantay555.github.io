@@ -1,0 +1,11 @@
+---
+title: "Simplicity"
+---
+
+I was recently told that the study of ants is called Myrmecology. It was pretty funny to hear that I should pursue in a topic rather niche, especially hearing it from a mother who continuously complains about wanting her son to accomplish slightly above ambitious-level dreams. This would include the finance PE segway, not to be cliche or anything as an only child raised in an ultra-asian household, and parents incessantly and excessively worrying for the future of their son.
+
+But I don’t want to timber away too much wood, because the idea of today was to advocate how cool ants are. Within the past month of keeping ants, and reviving a delicate part of my passion for nature that first rooted itself half a year prior to Covid, nurturing eight different ant colonies ceaselessly amazes me at how societies operate on almost a microscopic and merely a mili-scopic level. It’s a eusociality, and each singular ant operate in harmony like cells in our body rather than individual entities. As intrigued as I am and as you most probably are, there is the queen whose sole j-o-b is to lay brood. And though she is the heartbeat of the colony and is revered by all her younglings, I have wondered for the 168 million years that ants have been around if there has ever been a revolution.
+
+Yes, I’ve done my research and to break the news, there are revolutions. But they are driven by genetic self-interests rather than intending to obtain political freedom. So they are not exactly the revolutions we know of, and tis’ something we lose to an insect one-millionth of a size of us.
+
+Sometimes I want to be an ant. A simple life surrounded by a colony of siblings, and one tender loving mother that will always continue producing a million more siblings for me to love. But to be inched out of every dimension, fabricated to be one amongst a million others, doesn’t seem too bad to me at all. Looks like I’ll be living a busy yet fulfilling job, breaking down decomposing matter, build trails for large humans to watch, have slick mandibles to clamper on, and live a life free of political agony and capitalistic indulgence idiosyncratic to the world of Homo Sapiens. Or maybe this is because I’m an only child.
